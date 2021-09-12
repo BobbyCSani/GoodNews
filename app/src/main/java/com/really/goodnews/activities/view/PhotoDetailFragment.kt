@@ -31,6 +31,7 @@ class PhotoDetailFragment(private val photo: Photo): Fragment() {
                 .build()
         )
         Glide.with(this).load(url).into(binding.imageView)
+        binding.photoTitle.text = photo.title
         return binding.root
     }
 }
